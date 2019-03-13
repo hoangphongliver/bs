@@ -1,0 +1,375 @@
+
+h3{
+    border: none;
+}
+section .chitietsach{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+section .chitietsach .danhmuc{
+    height: 40px;
+    border-bottom: 1px solid darkgrey;
+}
+section .chitietsach .danhmuc ul{
+    display: flex;
+    margin: 0 10px;
+}
+section .chitietsach .danhmuc ul li{
+    margin: 0 10px;
+    line-height: 40px;
+}
+section .chitietsach .danhmuc ul li a{
+    font-size: 13px;
+}
+section .chitietsach .danhmuc i{
+    color: gray;
+    padding-left: 5px;
+}
+section .chitietsach .chitiet{
+    margin-top: 30px;
+}
+section .chitietsach .chitiet .thongtinsach{
+    height: 500px;
+    display: flex;
+    position: relative;
+}
+section .chitietsach .chitiet .thongtinsach #img{
+    width: 250px;
+    height: 100%;
+}
+section .chitietsach .chitiet .thongtinsach #img img{
+    width: 210px;
+    height: 300px;
+    margin: 10px 30px 0 10px;
+}
+section .chitietsach .chitiet .thongtinsach .thongtinchitiet{
+    width: 580px;
+}
+section .chitietsach .chitiet .thongtinsach .thongtinchitiet p{
+    margin-top: 10px;
+    color: black;
+}
+section .chitietsach .chitiet .thongtinsach .thongtinchitiet #p0{
+    color: gray;
+    margin-top: 20px;
+    font-size: 13.5px;
+    margin-left: 5px;
+    line-height: 20px;
+    word-spacing: 5px;
+}
+section .chitietsach .chitiet .thongtinsach .thongtinchitiet #p1{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed gray;
+}
+section .chitietsach .chitiet .thongtinsach .thongtinchitiet a{
+    color: #057a45;
+}
+section .chitietsach .chitiet .thongtinsach .thongtinchitiet #a0{
+    color: darkcyan;
+    margin-left: 5px;
+    transition: 1s;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan{
+    width: 280px;
+    height: 320px;
+    border: 3px solid darkgray;
+    margin: 10px 0px 0 20px;
+    border-radius: 10px;
+    position: relative;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan p{
+    margin: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed gray ;	
+    font-weight: bold;
+    color: black;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan p:first-child{
+    border: none;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan #p2{
+    color: #057a45;
+    text-align: center;
+    font-weight: bold;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan span{
+    margin-left: 40px;
+    color:orangered;
+    font-size: 18px;
+    float: right;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan #sp1{
+    color: black;
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan #sp2{
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan #sp3{
+    color: #057a45;
+    font-size: 15px;
+    font-weight: normal;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan a{
+    padding: 8px 30px 13px 20px ;
+    border-radius: 5px;
+    background: palegoldenrod;
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    color: #057a45;
+    font-weight: bold;
+}
+section .chitietsach .chitiet .thongtinsach .thanhtoan i{
+    padding-right: 10px;
+    color: seagreen;
+    font-size: 20px;
+}
+section .chitietsach .chitiet .thongtinsach .service{
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+}
+section .chitietsach .chitiet .thongtinsach .service p{
+    margin-top: 15px;
+    color: black;
+}
+section .chitietsach .chitiet .thongtinsach .service span{
+    color: black;
+    font-size: 12px;
+}
+section .chitietsach .chitiet .thongtinsach .service i{
+    font-size: 20px;
+    color: #057a45;
+}
+section .chitietsach .chitiet .thongtinsach .service a{
+    color: #057a45;
+}
+section .chitietsach .chitiet .thongtinsach .like{
+    position: absolute;
+    bottom: 120px;
+    right: 75px;
+}
+section .chitietsach .chitiet .thongtinsach .like a{
+    padding: 10px;
+    background: #f2f5f7;
+    border-radius: 3px;
+    border: 1px solid darkgrey;
+    color: cornflowerblue;
+}
+section .chitietsach .chitiet .thongtinsach .like #al1{
+    padding: 10px 20px;
+}
+section .chitietsach .chitiet .thongtinsach .like i{
+    padding-right: 5px;
+    color: gray;
+    font-size: 18px;
+}
+section .chitietsach .chitiet .thongtinsach .like #al1:hover #i10{
+    color:crimson;
+}
+section .chitietsach .chitiet .thongtinsach .like #al2:hover #i11{
+    color:#057a45;
+}
+section .chitietsach .chitiet .gioithieusach{
+    height: auto;
+}
+section .chitietsach .chitiet .gioithieusach .gthieu{
+    height: auto;
+    min-height: 600px;
+}
+section .chitietsach .chitiet .gioithieusach .gthieu ul{
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed gray;
+}
+section .chitietsach .chitiet .gioithieusach .gthieu ul li{
+    margin: 0px 50px 0 0;
+}
+section .chitietsach .chitiet .gioithieusach .gthieu ul li a{
+    color : dimgray;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+section .chitietsach .chitiet .gioithieusach .gthieu ul li a:hover{
+    color: seagreen;
+    border-bottom: 2px solid seagreen;
+}
+section .chitietsach .chitiet .gioithieusach .gthieu p{
+    margin-top: 30px; 
+    color: black;
+}
+section .chitietsach .chitiet .gioithieusach .gthieu #p3{
+    font-size: 16px;
+    margin-left: 10px;
+}
+section .chitietsach .chitiet .gioithieusach .gthieu #p4{
+    line-height: 35px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: dimgrey;
+}
+section .chitietsach .chitiet .gioithieusach .thongtinchitietsach{
+    margin-top: 50px;
+}
+section .chitietsach .chitiet .gioithieusach .thongtinchitietsach h4{
+    color: #057a45;
+}
+section .chitietsach .chitiet .gioithieusach .thongtinchitietsach .table{
+    margin-top: 50px;
+    display: flex;
+}
+section .chitietsach .chitiet .gioithieusach .thongtinchitietsach .table td{
+    padding: 5px 30px 5px 5px;
+    font-size: 13.5px;
+    list-style: outside;
+}
+section .chitietsach .chitiet .gioithieusach .thongtinchitietsach .table #tb2{
+    margin-left: 200px;
+}
+section .chitietsach h3{
+    margin-top: 30px;
+}
+section .chitietsach .nhanxet{
+    display: flex;
+    margin-top: 20px;
+    height: 250px;
+    width: 100%;
+}
+section .chitietsach .nhanxet .mg{
+    margin-right: 200px;
+}
+section .chitietsach .nhanxet li{
+    color: black;
+}
+section .chitietsach .nhanxet .danhgia{
+    width: 400px;
+    height: 200px;
+    border: 1px solid darkgrey;
+    border-bottom: 4px solid darkgray;
+    border-radius: 5px;
+}
+section .chitietsach .nhanxet .danhgia .danhgiatb{
+    width: 160px;
+}
+section .chitietsach .nhanxet .danhgia .danhgiatb p{
+    margin: 20px 0 10px 10px;
+    border-right: 1px dashed darkgray;
+    padding-right: 10px;
+    text-align: center;
+    color: black;
+}
+section .chitietsach .nhanxet .danhgia .danhgiatb p:first-child{
+    font-size: 15px;
+}
+section .chitietsach .nhanxet .danhgia .danhgiatb p:last-child{
+    font-size: 30px;
+}
+section .chitietsach .nhanxet .danhgia ul{
+    margin: 30px 30px 0 30px;
+}
+section .chitietsach .nhanxet .danhgia {
+    display: flex;
+}
+section .chitietsach .nhanxet .danhgia ul li{
+    margin-bottom: 5px;
+}
+section .chitietsach .nhanxet .danhgia ul li span{
+    color: black;
+}
+section .chitietsach .nhanxet .danhgia ul li span:last-child{
+    margin-left: 120px;
+}
+section .chitietsach .nhanxet .danhgia ul li i{
+    font-size: 10px;
+    margin-top: 4px;
+    margin-left: 3px;
+    color: gold;
+    position: relative;
+}
+section .chitietsach .nhanxet .danhgia ul li i::after{
+    content: "";
+    width: 100px;
+    height: 1px;
+    border: 1px solid gray;
+    background: white;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    border-radius: 1px;
+    
+}
+section .chitietsach .noidung{
+    width: 100px;
+}
+section .chitietsach .noidung li{
+    margin-bottom: 16px;
+}
+section .chitietsach .noidung li span{
+    color: black;
+    font-size: 14px;
+    margin-right: 5px;
+}
+section .chitietsach .noidung li span:first-child{
+    border-radius: 100%;
+    padding: 3px 6px;
+    font-size: 10px;
+    border: 1px solid darkgray;
+}
+section .chitietsach .nhanxet .guidanhgia{
+    margin-left: 30px;
+    position: relative;
+}
+section .chitietsach .nhanxet .guidanhgia ul{
+    display: flex;
+}
+section .chitietsach .nhanxet .guidanhgia #ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section .chitietsach .nhanxet .guidanhgia #ul i{
+    color: gold;
+    display: none;
+}
+section .chitietsach .nhanxet .guidanhgia i{
+    font-size: 16px;
+    color: darkgrey;
+    margin-right: 3px;
+}
+section .chitietsach .nhanxet .guidanhgia input[type="text"]{
+    display: block;
+    margin-top: 12px;
+    border-radius: 3px;
+    border: 1px solid darkgrey;
+    width: 300px;
+    height: 28px;
+}
+section .chitietsach .nhanxet .guidanhgia textarea{
+    margin-top: 10px;
+    width: 300px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid darkgrey;
+}
+section .chitietsach .nhanxet .guidanhgia p{
+    margin-top: 30px;
+    color: black;
+}
+section .chitietsach .nhanxet .guidanhgia p a{
+    padding: 12px 20px;
+    background: #057a45;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+section .chitietsach .fb-comments{
+    margin-top: 10px;
+}
