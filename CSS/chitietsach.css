@@ -373,3 +373,8 @@ section .chitietsach .nhanxet .guidanhgia p a{
 section .chitietsach .fb-comments{
     margin-top: 10px;
 }
+@media only screen and (max-width: 1224px){
+    .cangiua{
+        width: 80%;
+    }
+}

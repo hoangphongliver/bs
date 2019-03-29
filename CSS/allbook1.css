@@ -1,6 +1,6 @@
 .tittle{
     display: flex;
-    margin: 1rem 0 0 1rem;
+    margin: 20px;
 }
 .p_magin{
     margin: 7px;
@@ -13,17 +13,16 @@
 .tittle p{
     margin: 5px;
     color: black;
-    font-size: 1.1em;
 }
 .tittle a{
     color: black;
 }
 .search_content{
     display: flex;
-    margin-top: 1rem;
+    margin-top: 2%;
     width: 100%;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 /*  CATEGORY   */
@@ -54,12 +53,12 @@
     border-bottom: 1px dashed gainsboro;
 }
 .search_content .category .all_category ul li{
-    padding: .8rem 1rem;
-    border-bottom: 1px dashed rgb(231, 220, 220);
+    padding: .8rem 0 0.8rem 1rem;
+    border-bottom: 1px dashed gainsboro;
     color: black;
     font-size: 1.05em;
 }
-.search_content .category .all_category ul li:hover{
+.search_content .category .all_category ul li:hover, li:hover a{
     background: mediumaquamarine;
     color: white;
 }
@@ -80,6 +79,7 @@
     margin-left: .5rem;
 }
 .search_content .book_category h3{
+    margin-top: 20px;
     border-bottom: 1px dashed gray;
     margin-left: 5px;
 }
@@ -105,23 +105,17 @@
     height: 350px;
     position: relative;
 }
-.search_content .book_category .book img{
+.search_content .book_category .book .img{
     width: 100%;
-    height: 220px;
+    height: 63%;
     border-radius: .2rem;
 }
-/* 
-.search_content .book_category .book .hover img{
-    width: 100%;
-    height: 220px;
-    border-radius: .2rem;
-} */
 .search_content .book_category .book #pb_1 a{
     padding: 8px 4px;
     background: tomato;
     border-radius: 3px;
     position: absolute;
-    top: 205px;
+    top: 190px;
     right: -10px;
     color: white;
 }
@@ -140,12 +134,6 @@
     color: crimson;
     font-size: 14px;
 }
-.search_content .book_category .hover #pb_6{
-     display: none;
-}
-.search_content .book_category .hover #pb_6 span {
-    color:crimson;
-}
 .search_content .book_category .book:hover  .hover p{
     color: mediumseagreen;
 }
@@ -158,8 +146,8 @@
 .search_content .book_category .book:hover  .hover #pb_5{
     color: mediumseagreen;
 }
-.search_content .book_category .book:hover  .hover #pb_6>span{
-    color: mediumseagreen;
+.search_content .book_category .hover #pb_6 span {
+    color: brown;
 }
 .search_content .book_category .book:hover img{
     box-shadow: mediumseagreen 2px 2px 2px;
@@ -205,56 +193,19 @@
     border-radius: 0.2rem;
     color: white;
 }
-.search_content .phantrang .phantrang1 ul>li> #a_pt1{
+/* .search_content .phantrang .phantrang1 ul>li> #a_pt1{
     background: mediumseagreen;
-}
+} */
 .search_content .phantrang .phantrang1 ul li a:hover{
     background: mediumseagreen;
     color: white;
 }
 /* END BOOK_CATEGORY */
-/* RESPONSIVE */
 
-@media only screen and (max-width:1224px){
-    .top{
-        display: none;
-    }
-    .nhanthongbao{
-        display: none;
-    }
-    nav{
-        display: none;
-    }
-    .login{
-        display: none;
-    }
+@media only screen and (max-width:1024px){
     .cangiua{
        width: 95%;
     }
-    .cart{
-        display: none;
-    }
-    header{
-        height: 150px;
-    }
-    .tittle {
-        display: flex;
-        margin: 2rem 0 0 .5rem;
-    }
-    header .cangiua{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    header .form{
-        margin-top: 3px;
-        width: 70%;
-    }
-    header .form input[type="text"] {
-        border-radius: 5px;
-        width: 90%;
-    }
-
     .search_content .category {
         display: none;
     }
@@ -279,9 +230,9 @@
         border-bottom: 1px solid darkgray;
     }
 
-    .search_content .book_category .book .hover img{
-        width: 130px !important;
-        height: 195px !important;
+    .search_content .book_category .book .hover .img{
+        width: 15%;
+        height: 64%;
     }
     .search_content .book_category .book #pb_1 a{
         display: none;
@@ -303,7 +254,7 @@
     }
     .search_content .book_category .book #pb_2{
         margin-top: 20px;
-        font-size: 17px;
+        font-size: 15px;
     }
     .search_content .phantrang .phantrang1{
         display: flex;
@@ -315,8 +266,4 @@
         margin-top: 0;
     }
 }
-@media only screen and (max-width:748px){
-    footer{
-        display: none;
-    }
-}
+
