@@ -1,0 +1,12 @@
+.content {
+  display: flex;
+  app-menu{
+      flex: 0 0 20%;
+      height: 100vh;
+      background: seagreen;
+  }
+  app-content-right{
+      padding: 0 50px;
+      flex: 0 0 70%;
+  }
+}

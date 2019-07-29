@@ -1,0 +1,24 @@
+form{
+    display: flex;
+    flex-direction: column;
+    mat-form-field{
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    button{
+        width: 40%;
+        margin-bottom: 50px;
+    }
+    mat-radio-button{
+        margin-right: 100px;
+    }
+    .formGroup{
+        position: relative;
+        p{
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            color: red;
+        }
+    }
+}
