@@ -4,4 +4,5 @@ export class Book {
     tacGia: string;
     price: number;
     des: string;
+    status: string;
 }

@@ -32,6 +32,6 @@
         <p *ngIf="formBook.get('des')?.errors?.required && formBook.get('des').touched" >Mô tả không được để trống</p>
     </div>
 
-    <button *ngIf="mode =='add' "  mat-raised-button type="submit" [disabled]="!formBook.valid" (click) = "addBook()">Add book</button>
-    <button *ngIf="mode == 'edit' "   mat-raised-button type="submit" [disabled]="!formBook.valid" (click) = "editBook()">Edit book</button>
+    <button *ngIf="mode =='add'"  mat-raised-button type="submit" [disabled]="!formBook.valid" (click) = "addBook()">Add book</button>
+    <button *ngIf="mode == 'edit'"   mat-raised-button type="submit" [disabled]="!formBook.valid" (click) = "editBook()">Edit book</button>
 </form>

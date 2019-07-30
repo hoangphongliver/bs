@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Book } from 'src/app/models/book';
 import { bookList } from 'src/app/data';
 import { BookServiceService } from 'src/app/book.service.ts/book-service.service';
@@ -15,19 +15,24 @@ import { SelectionModel } from '@angular/cdk/collections';
 })
 export class DataTableComponent implements OnInit {
 
-  displayedColumns: string[] = ['select','id', 'name', 'tacGia', 'price','des', 'action','status'];
+  displayedColumns: string[] = ['select', 'id', 'name', 'tacGia', 'price', 'des', 'action', 'status'];
   books: Book[] = [];
   dataSource = new MatTableDataSource<Book>([]);
   selection = new SelectionModel<Book>(true, []);
-  isSelected : string;
+  isSelected: boolean;
+  icon: string = '';
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  arrChecked = [];
+
+  bookArr = [];
+
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
 
   constructor(private bookServiceService: BookServiceService) { }
 
   ngOnInit() {
-    this.isSelected = 'no';
+    this.isSelected = false;
     this.books = bookList;
     this.dataSource.data = this.books;
     this.dataSource.paginator = this.paginator;
@@ -37,11 +42,11 @@ export class DataTableComponent implements OnInit {
   triggerWhenSave() {
     this.bookServiceService.currentBook.subscribe(book => {
       let isExist = false;
-      this.books.forEach((val, i)=>{
-        if(book.id == val.id){
+      this.books.forEach((val, i) => {
+        if (book.id == val.id) {
           this.books[i] = JSON.parse(JSON.stringify(book));
           isExist = true;
-        }else{
+        } else {
           isExist = false;
         }
       })
@@ -60,9 +65,15 @@ export class DataTableComponent implements OnInit {
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
   masterToggle() {
-    this.isAllSelected() ?
-        this.selection.clear() :
-        this.dataSource.data.forEach(row => this.selection.select(row));
+    if (this.isAllSelected()) {
+      this.selection.clear();
+      this.isSelected = false;
+    } else {
+      this.dataSource.data.forEach(row => {
+        this.selection.select(row);
+        this.isSelected = true;
+      });
+    }
   }
 
   /** The label for the checkbox on the passed row */
@@ -72,28 +83,52 @@ export class DataTableComponent implements OnInit {
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
   }
-  
 
-  delBook(id: number){
-    this.books.splice( id - 1 , 1);
+
+  delBook(id: number) {
+    this.books.splice(id, 1);
     this.books = bookList;
     this.dataSource.data = this.books;
     this.dataSource.paginator = this.paginator;
+    console.log(id);
   }
 
-  editBook(row){
+  editBook(row) {
     this.bookServiceService.getBook(JSON.parse(JSON.stringify(row)));
   }
 
-  addFavour(row){
-  //  this.isSelected = this.selection.isSelected() ? 'yes' : 'no';
-  console.log(row);
-  
+  changeCheckbox(row, event) {
+    if (event.checked == true) {
+      this.arrChecked.push(row.id);
+    } else {
+      this.arrChecked.splice(this.arrChecked.indexOf(row.id), 1);
+    }
+    console.log(this.arrChecked);
   }
 
-  changeCheckbox(row){
-    console.log(row);
-    
-    this.selection.toggle(row);
+  addFavour() {
+    this.books.forEach((bookItem) => {
+      if (this.isSelected) {
+        bookItem.status = "done_outline";
+      }
+      this.arrChecked.forEach((item) => {
+        if (bookItem.id == item) {
+          bookItem.status = "done_outline";
+        }
+      })
+    })
+  }
+
+  unFavour() {
+    this.books.forEach((bookItem) => {
+      // if(!this.isSelected){
+      //   bookItem.status = "";
+      // }
+      this.arrChecked.forEach((item) => {
+        if(bookItem.id == item){
+          bookItem.status = "";
+        }
+      })
+    })
   }
 }

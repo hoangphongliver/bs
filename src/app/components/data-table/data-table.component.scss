@@ -5,8 +5,13 @@ table{
         margin-right: 20px;
     }
 }
-.btn{
+.favorite{
     display: flex;
+    margin-right: 15px;
     justify-content: flex-end;
-    margin-bottom: 15px;
+    .btn{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+    }
 }

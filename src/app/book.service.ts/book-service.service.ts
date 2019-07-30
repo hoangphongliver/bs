@@ -8,6 +8,7 @@ import { Book } from '../models/book';
 export class BookServiceService {
 
   private bookSource = new Subject<Book>();
+  
   currentBook = this.bookSource.asObservable();
 
   private bookEditSource = new Subject<Book>();

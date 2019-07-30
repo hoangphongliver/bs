@@ -30,6 +30,7 @@ export class BookGridFormComponent implements OnInit {
       tacGia: '',
       price: null,
       des: '',
+      status: ''
     };
     this.mode = 'add';
     this.formBook = this.builder.group({

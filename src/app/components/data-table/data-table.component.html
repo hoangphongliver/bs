@@ -1,5 +1,10 @@
-<div class="btn">
-    <button mat-raised-button (click)="addFavour()"> Favourite </button>
+<div class="favorite">
+    <div class="btn">
+        <button mat-raised-button (click)="unFavour()"> Unfavourite </button>
+    </div>
+    <div class="btn">
+        <button mat-raised-button (click)="addFavour()"> Favourite </button>
+    </div>
 </div>
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
@@ -13,7 +18,7 @@
             </th>
             <td mat-cell *matCellDef="let row">
                 <mat-checkbox (click)="$event.stopPropagation()"
-                            (change)="$event ? changeCheckbox(row) : null"
+                            (change)="$event ? changeCheckbox(row,$event) : null"
                             [checked]="selection.isSelected(row)"
                             [aria-label]="checkboxLabel(row)">
                 </mat-checkbox>
@@ -23,7 +28,7 @@
         <!-- Position Column -->
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> ID </th>
-            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            <td mat-cell *matCellDef="let element ; let id = index"> {{id+1}} </td>
         </ng-container>
     
         <!-- Name Column -->
@@ -51,19 +56,19 @@
 
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef> Action </th>
-            <td mat-cell *matCellDef="let element">
+            <td mat-cell *matCellDef="let element; let id=index">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" (click) = "editBook(element)" matTooltip="Edit Book"
                 matTooltipPosition="after">
                     edit
                 </mat-icon>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" (click) = "delBook(element.id)" matTooltip="Delete Book"
+                <mat-icon aria-hidden="false" aria-label="Example home icon" (click) = "delBook(id)" matTooltip="Delete Book"
                 matTooltipPosition="after">delete</mat-icon>
             </td>
         </ng-container>
 
         <ng-container matColumnDef="status">
             <th mat-header-cell *matHeaderCellDef> Status </th>
-            <td mat-cell *matCellDef="let element"> <span *ngIf="isSelected =='yes'" > * </span> </td>
+            <td mat-cell *matCellDef="let element"><mat-icon aria-hidden="false">{{element.status}}</mat-icon></td>
         </ng-container>
     
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
