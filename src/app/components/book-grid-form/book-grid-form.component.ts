@@ -24,39 +24,32 @@ export class BookGridFormComponent implements OnInit {
   public mode: string;
 
   ngOnInit() {
-    this.book = {
-      id: null,
-      name: '',
-      tacGia: '',
-      price: null,
-      des: '',
-      status: ''
-    };
     this.mode = 'add';
     this.formBook = this.builder.group({
-      id: [''],
+      id: null,
       name: ['', Validators.required],
       tacGia: ['', Validators.required],
-      price: ['', Validators.required],
-      des: ['', [Validators.required, Validators.minLength(9)]]
+      price: [null, Validators.required],
+      des: ['', [Validators.required, Validators.minLength(9)]],
+      status: ['']
     });
     this.triggerWhenEdit();
   }
 
   addBook() {
-    this.book.id = this.listbook.length + 1;
-    this.bookServiceService.saveBook(JSON.parse(JSON.stringify(this.book)));
+    this.formBook.value.id = this.listbook.length + 1;
+    this.bookServiceService.saveBook(JSON.parse(JSON.stringify(this.formBook.value)));
+    console.log(this.listbook);
     this.formBook.reset();
   }
 
   editBook(){
-    this.bookServiceService.saveBook(JSON.parse(JSON.stringify(this.book)));
+    this.bookServiceService.saveBook(JSON.parse(JSON.stringify(this.formBook.value)));
     this.formBook.reset();
   }
 
   triggerWhenEdit(){
     this.bookServiceService.bookEditSource$.subscribe(book => {
-      this.book = book;
       this.mode = (book.id) ? 'edit' : 'add';
     });
   }

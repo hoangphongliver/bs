@@ -15,6 +15,14 @@ export class BookServiceService {
 
   bookEditSource$ = this.bookEditSource.asObservable();
 
+  private colorSource = new Subject<[]>();
+
+  colorSource$ = this.colorSource.asObservable();
+
+  private fontSizeSource = new Subject<[]>();
+
+  fontSizeSource$ = this.fontSizeSource.asObservable();
+
   constructor() { }
 
   saveBook(book: Book) {
@@ -23,6 +31,14 @@ export class BookServiceService {
 
   getBook(book: Book){
     this.bookEditSource.next(book);
+  }
+
+  saveColor(color){
+    this.colorSource.next(color);
+  }
+
+  saveFontSize(fontSize){
+    this.fontSizeSource.next(fontSize);
   }
 }
 

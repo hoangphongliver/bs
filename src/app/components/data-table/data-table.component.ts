@@ -121,9 +121,9 @@ export class DataTableComponent implements OnInit {
 
   unFavour() {
     this.books.forEach((bookItem) => {
-      // if(!this.isSelected){
-      //   bookItem.status = "";
-      // }
+      if(this.isSelected){
+        bookItem.status = "";
+      }
       this.arrChecked.forEach((item) => {
         if(bookItem.id == item){
           bookItem.status = "";

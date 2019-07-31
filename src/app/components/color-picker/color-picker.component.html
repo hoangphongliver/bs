@@ -1,0 +1,8 @@
+<div class="color-picker">
+    <div class="color-picker__color" *ngFor="let color of colors" [style.background]="color" (click) = "getColor(color)" ></div>
+    <button mat-raised-button (click)="upFontSize()">Up FontSize</button>
+    <button mat-raised-button (click)="downFontSize()">Down FontSize</button>
+</div>
+<div class="text-color">
+    <app-text-color></app-text-color>
+</div>

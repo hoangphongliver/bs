@@ -14,6 +14,8 @@ import { RouterModule } from '@angular/router';
 import { ListbookComponent } from './components/listbook/listbook.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { BookGridFormComponent } from './components/book-grid-form/book-grid-form.component';
+import { ColorPickerComponent } from './components/color-picker/color-picker.component';
+import { TextColorComponent } from './components/text-color/text-color.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { BookGridFormComponent } from './components/book-grid-form/book-grid-for
     ContentRightComponent,
     ListbookComponent,
     DataTableComponent,
-    BookGridFormComponent
+    BookGridFormComponent,
+    ColorPickerComponent,
+    TextColorComponent
   ],
   imports: [
     BrowserModule,
